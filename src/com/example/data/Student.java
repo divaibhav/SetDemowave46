@@ -7,9 +7,10 @@ Try to add duplicate student objects and check whether set is allowing you to ad
  */
 package com.example.data;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>  {
     private int rollNo;
     private String name;
     private double cpi;
@@ -47,6 +48,9 @@ public class Student {
                 ", cpi=" + cpi +
                 '}';
     }
+
+
+
     @Override
     public boolean equals(Object o){
         System.out.println("equals method called");
@@ -71,4 +75,22 @@ public class Student {
         System.out.println("hash code called");
         return Objects.hash(rollNo, name, cpi);
     }
+
+    @Override
+    public int compareTo(Student o) {
+        // 0 , 1 , -1
+     /*   if(this.rollNo == o.rollNo){
+            return 0;
+        }else if(this.rollNo < o.rollNo){
+            return -1;
+        }else{
+            return 1;
+        }*/
+        return Integer.compare(this.rollNo, o.rollNo);
+    }
+
+  /*  @Override
+    public int compareTo(Object o) {
+        return 0;
+    }*/
 }

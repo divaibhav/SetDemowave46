@@ -35,10 +35,14 @@ public class StudentImpl {
         System.out.println("integerTreeSet = " + integerTreeSet);
 
         //TreeSet
-       /* TreeSet<Student> studentTreeSet = new TreeSet<>();
-        System.out.println("studentTreeSet.add(s1) = " + studentTreeSet.add(s1));*/
-        System.out.println("s2.hashCode() = " + s2.hashCode());
-        System.out.println("s3.hashCode() = " + s3.hashCode());
+        TreeSet<Student> studentTreeSet = new TreeSet<>();
+        System.out.println("studentTreeSet.add(s1) = " + studentTreeSet.add(s1));
+        System.out.println("studentTreeSet.add(s2) = " + studentTreeSet.add(s2));
+        System.out.println("studentTreeSet.add(s3) = " + studentTreeSet.add(s3));
+
+        System.out.println(studentTreeSet);
+
+
     }
 
 }
